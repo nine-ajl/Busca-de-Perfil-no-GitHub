@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti - Cabeçalho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="footer.css" />
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .content-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text-container {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .text-container h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .text-container p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        @media (min-width: 768px) {
+            .content-container {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 40px;
+                gap: 20px;
+            }
+
+            .content-container img {
+                max-width: 50%;
+                margin-right: 20px;
+            }
+
+            .text-container {
+                margin-top: 0;
+                text-align: left;
+                padding: 40px;
+                background-color: transparent;
+                flex: 1;
+            }
+
+            .text-container h1 {
+                font-size: 2rem;
+            }
+
+            .text-container p {
+                font-size: 1.1rem;
+            }
+        }
+
+        .cart-badge {
+            font-size: 0.7rem;
+            padding: 4px 6px;
+            border-radius: 50%;
+            background-color: #0066ff;
+            color: #fff;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+        }
+
+        .search-feedback {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: #333;
+        }
+
+        header img.logo {
+            height: 30px;
+        }
+
+        @media (min-width: 768px) {
+            header img.logo {
+                height: 40px;
+            }
+        }
+
+        .swiper {
+            padding: 1rem 2rem;
+        }
+
+        .swiper-slide {
+            max-width: 220px;
+            border-radius: 16px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: transparent;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            top: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .swiper {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+
+            .swiper-button-next {
+                right: -10px;
+                background-color: transparent;
+            }
+
+            .swiper-button-prev {
+                left: -10px;
+                background-color: transparent;
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-left: 0;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        .newsletter-box {
+            background-color: #e6e6e6;
+            border-radius: 10px;
+            max-width: 950px;
+        }
+
+        .newsletter-input {
+            height: 40px;
+            border-radius: 6px;
+            padding-left: 12px;
+            font-size: 12px;
+            width: 200px;
+        }
+
+        .newsletter-btn {
+            height: 40px;
+            padding: 0 18px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 6px;
+            background-color: #0056ff;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .newsletter-btn:hover {
+            background-color: #0043cc;
+        }
+
+        @media (max-width: 767px) {
+            .newsletter-form {
+                flex-direction: column;
+                gap: 12px;
+                text-align: left;
+            }
+
+            .newsletter-input {
+                width: 100%;
+                font-size: 16px;
+                height: 58px;
+                border-radius: 14px;
+            }
+
+            .newsletter-btn {
+                width: 100%;
+                font-size: 20px;
+                height: 58px;
+                border-radius: 14px;
+            }
+        }
+
+        .footer-container {
+            background-color: #e6e6e6;
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 2rem 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.15);
+        }
+
+
+        footer {
+            background-color: #e6e6e6;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        footer .footer-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        footer .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-column li {
+            margin: 0.3rem 0;
+        }
+
+
+        @media (max-width: 768px) {
+            .footer-column {
+                flex: 1 1 100%;
+            }
+        }
+
+        .footer-title {
+            background: none;
+            border: none;
+            font-weight: bold;
+            font-size: 1rem;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.5rem 0;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer-payments {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .footer-payments img {
+            height: 24px;
+            object-fit: contain;
+        }
+
+
+        .footer-bottom {
+            background-color: #e6e6e6;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-seals {
+            margin-top: 1rem;
+        }
+
+        .footer-seals img {
+            max-width: 260px;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                display: flex;
+                width: auto;
+                height: auto;
+            }
+
+            .footer-columns {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+
+            .footer-links {
+                display: none;
+            }
+
+            .footer-column.open .footer-links {
+                display: block;
+                margin-top: 0.5rem;
+            }
+
+            .footer-title i {
+                transition: transform 0.3s ease;
+            }
+
+            .footer-columns.open .footer-title i {
+                transform: rotate(180deg);
+            }
+
+
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-brand .logo {
+            align-items: center;
+            width: 140px;
+            margin-bottom: 1rem;
+        }
+
+        .selo-img {
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+            max-width: 100px;
+        }
+
+        .menu-categorias {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        .menu-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-trigger {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .dropdown-categorias {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            width: 1000px;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .menu-item:hover .dropdown-categorias {
+            display: flex;
+        }
+
+        .categorias-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .coluna {
+            flex: 1;
+        }
+
+        .coluna h4 {
+            color: #0366d6;
+            margin-bottom: 8px;
+        }
+
+        .coluna ul {
+            list-style: none;
+            padding: 0;
+            color: #666;
+        }
+
+        .coluna ul li {
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+
+        .banner {
+            width: 200px;
+            position: relative;
+        }
+
+        .banner img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .texto-banner {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            color: white;
+            font-weight: bold;
+        }
+
+        .texto-banner button {
+            margin-top: 10px;
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            .dropdown-categorias {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-primary text-white text-center py-1">
+        Ganhe <span class="px-2 py-1 bg-danger rounded">R$10,00</span> de desconto no primeiro pedido – Use o cupom
+        <strong>DESCONTO10</strong>
+    </div>
+
+    <header class="bg-white p-3 border-bottom d-md-none">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <button class="btn p-0 d-md-none">
+                    <span style="font-size: 1.5rem;">&#9776;</span>
+                </button>
+
+                <div class="text-center flex-grow-1 d-md-none">
+                    <img src="https://files.fm/thumb_show.php?i=zhbcd57gp4" class="logo" alt="Logo Avanti">
+                </div>
+
+                <div class="position-relative d-md-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" class="bi bi-cart"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                    </svg>
+                    <span class="cart-badge">2</span>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <div class="input-group search-input d-md-none">
+                    <input type="text" class="form-control" placeholder="Digite aqui o que você procura"
+                        id="search-text" />
+                    <button class="btn btn-outline-primary" id="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="search-feedback" class="search-feedback"></div>
+            </div>
+        </div>
+    </header>
+
+    <header class="d-none d-md-block bg-white border-bottom py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-start">
+                    <img src="https://files.fm/thumb_show.php?i=zhbcd57gp4" class="logo" alt="Logo Avanti"
+                        style="height: 40px;">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-desktop"
+                            placeholder="Digite aqui o que você procura">
+                        <button class="btn btn-outline-primary" id="search-btn-desktop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="search-feedback-desktop" class="search-feedback"></div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="d-flex justify-content-end align-items-center gap-4">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000"
+                                class="bi bi-person" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                            </svg>
+                            <div class="lh-sm">
+                                <small>Olá,</small><br>
+                                <strong>Karine!</strong>
+                            </div>
+                        </div>
+
+                        <div class="position-relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000"
+                                class="bi bi-cart" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                            </svg>
+                            <span class="cart-badge">2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid bg-light py-2 d-none d-md-block border-bottom">
+        <div class="container d-flex justify-content-start gap-3 flex-wrap align-items-start">
+            <div class="menu-item position-relative">
+                <span class="me-3 menu-trigger" style="cursor: pointer;">☰ Todas as Categorias</span>
+                <div class="dropdown-categorias position-absolute bg-white border rounded shadow p-4">
+                    <h5>Departamento</h5>
+                    <div class="d-flex gap-4">
+                        <div class="coluna">
+                            <h6 class="text-primary">Categoria</h6>
+                            <ul class="list-unstyled text-muted">
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                            </ul>
+                        </div>
+                        <div class="coluna">
+                            <h6 class="text-primary">Categoria</h6>
+                            <ul class="list-unstyled text-muted">
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                            </ul>
+                        </div>
+                        <div class="coluna">
+                            <h6 class="text-primary">Categoria</h6>
+                            <ul class="list-unstyled text-muted">
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                                <li>Categoria </li>
+                            </ul>
+                        </div>
+                        <div class="banner position-relative">
+                            <img src="https://files.fm/thumb_show.php?i=9mkmrkkvxn" class="img-fluid rounded"
+                                alt="Banner">
+                            <div class="texto-banner position-absolute text-white">
+                                <p>Confira os <br> Produtos <br><strong>Que acabaram</strong><br> de chegar</p>
+                                <button class="btn btn-light btn-sm mt-2">VER TODOS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="text-decoration-none text-dark">Departamento</a>
+            <a href="#" class="text-decoration-none text-dark">Departamento</a>
+            <a href="#" class="text-decoration-none text-dark">Departamento</a>
+            <a href="#" class="text-decoration-none text-dark">Departamento</a>
+            <a href="#" class="text-decoration-none text-dark">Departamento</a>
+        </div>
+    </div>
+
+
+    <div class="d-none d-md-block">
+        <a href="#">
+            <img src="https://files.fm/thumb_show.php?i=dyhvkbe5ea" alt="Banner principal" class="img-fluid w-100" />
+        </a>
+    </div>
+    <div class="d-block d-md-none">
+        <a href="#">
+            <img src="https://files.fm/thumb_show.php?i=tmtsj9xv72" alt="Banner principal" class="img-fluid w-100" />
+        </a>
+    </div>
+
+    <div class="container my-5 position-relative justify-content-between gap-3">
+        <h2 class="fw-bold text-start">Lançamentos</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 100,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">10%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 79,90</p>
+                    <small>Ou em até 10x de R$ 7,90</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 120,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">15%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 102,00</p>
+                    <small>Ou em até 10x de R$ 10,20</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 150,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">20%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 120,00</p>
+                    <small>Ou em até 10x de R$ 12,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 200,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">25%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 150,00</p>
+                    <small>Ou em até 10x de R$ 15,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 250,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">30%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 175,00</p>
+                    <small>Ou em até 10x de R$ 17,50</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 300,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">35%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 195,00</p>
+                    <small>Ou em até 10x de R$ 19,50</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 350,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">40%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 210,00</p>
+                    <small>Ou em até 10x de R$ 21,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 400,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">45%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 220,00</p>
+                    <small>Ou em até 10x de R$ 22,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 450,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">50%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 225,00</p>
+                    <small>Ou em até 10x de R$ 22,50</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <img src="https://files.fm/thumb_show.php?i=yxdkd32pkn" alt="Caneca Avanti">
+        <div class="text-container">
+            <h1>LOREM IPSUM</h1>
+            <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui.
+                Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit
+                amet.
+                Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor
+                eget
+                lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero
+                commodo egestas efficitur id augue.
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="d-none d-md-block">
+            <img src="https://files.fm/thumb_show.php?i=5vdt7w26wk" class="img-fluid w-100" alt="Banner Desktop">
+        </div>
+
+        <div class="d-block d-md-none">
+            <img src="https://files.fm/thumb_show.php?i=hcjhka5k7j" class="img-fluid w-100" alt="Banner Mobile">
+        </div>
+    </div>
+    <div class="container my-5 position-relative justify-content-between gap-3">
+        <h2 class="fw-bold text-start">Lançamentos</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 100,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">10%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 79,90</p>
+                    <small>Ou em até 10x de R$ 7,90</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 120,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">15%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 102,00</p>
+                    <small>Ou em até 10x de R$ 10,20</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 150,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">20%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 120,00</p>
+                    <small>Ou em até 10x de R$ 12,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 200,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">25%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 150,00</p>
+                    <small>Ou em até 10x de R$ 15,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 250,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">30%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 175,00</p>
+                    <small>Ou em até 10x de R$ 17,50</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 300,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">35%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 195,00</p>
+                    <small>Ou em até 10x de R$ 19,50</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 350,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">40%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 210,00</p>
+                    <small>Ou em até 10x de R$ 21,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 400,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">45%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 220,00</p>
+                    <small>Ou em até 10x de R$ 22,00</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+                <div class="swiper-slide p-3 bg-white rounded shadow-sm d-flex flex-column h-100 text-center">
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">NOVO</span>
+                    <img src="https://files.fm/thumb_show.php?i=z7czegt4u9" class="img-fluid mb-2 rounded"
+                        alt="Produto">
+                    <h3 class="mb-1" style="font-size: 1rem;">Lorem Ipsum Dolor Sit Amet Consectetuer Adipiscing
+                        Elit
+                    </h3>
+                    <small class="text-muted text-decoration-line-through">R$ 450,00</small>
+                    <span class="badge bg-success my-1" style="font-size: 0.7rem; padding: 0.3rem 0.5rem;">50%
+                        OFF</span>
+                    <p class="fs-5 fw-bold m-0">R$ 225,00</p>
+                    <small>Ou em até 10x de R$ 22,50</small>
+                    <button class="btn btn-primary mt-auto w-100">Comprar</button>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="d-none d-md-block">
+            <img src="https://files.fm/thumb_show.php?i=cedsqpjkma" class="img-fluid w-100" alt="Banner Desktop 2">
+        </div>
+        <img src="https://files.fm/thumb_show.php?i=hwm6aceg8x" class="img-fluid w-100 d-md-none" alt="Banner Mobile 2">
+
+        <section class="newsletter-section py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h5 class="fw-bold">
+                        Cadastre-se na nossa <span class="text-primary">newsletter</span>
+                    </h5>
+                </div>
+
+                <div class="newsletter-box mx-auto p-4">
+                    <form class="newsletter-form row g-2 align-items-center justify-content-center">
+                        <div class="col-12 col-md-auto">
+                            <input type="text" class="form-control newsletter-input" placeholder="Digite seu nome"
+                                required>
+                        </div>
+                        <div class="col-12 col-md-auto">
+                            <input type="email" class="form-control newsletter-input" placeholder="Digite seu e-mail"
+                                required>
+                        </div>
+                        <div class="col-12 col-md-auto d-flex align-items-center">
+                            <input class="form-check-input me-2" type="checkbox" id="privacyCheck" required>
+                            <label class="form-check-label small m-0" for="privacyCheck">
+                                Estou de acordo com a <a href="#"
+                                    class="text-dark fw-semibold text-decoration-underline">Política de
+                                    Privacidade</a>
+                            </label>
+                        </div>
+                        <div class="col-12 col-md-auto">
+                            <button type="submit" class="btn btn-primary newsletter-btn">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <footer class="footer">
+                    <div class="footer-columns">
+                        <div class="footer-brand">
+                            <img src="https://files.fm/thumb_show.php?i=hg9rn7tw5f" alt="Logo Avanti" class="logo" />
+                            <div class="social-icons">
+                                <a href="#"><img
+                                        src="https://images.icon-icons.com/836/PNG/96/Instagram_icon-icons.com_66804.png"
+                                        alt="Instagram" /></a>
+                                <a href="#"><img
+                                        src="https://images.icon-icons.com/791/PNG/512/FB_icon-icons.com_65484.png"
+                                        alt="Facebook" /></a>
+                                <a href="#"><img src="https://images.icon-icons.com/195/PNG/256/YouTube_23392.png"
+                                        alt="YouTube" /></a>
+                                <a href="#"><img
+                                        src="https://images.icon-icons.com/2389/PNG/512/tiktok_logo_icon_144802.png"
+                                        alt="TikTok" /></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-column" data-mobile-toggle>
+                            <button class="footer-title">Institucional <i class="bi bi-chevron-down"></i></button>
+                            <ul class="footer-links">
+                                <li><a href="#">Sobre Nós</a></li>
+                                <li><a href="#">Nossas Lojas</a></li>
+                                <li><a href="#">Privacidade e Segurança</a></li>
+                                <li><a href="#">Termos e Condições</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="footer-column" data-mobile-toggle>
+                            <button class="footer-title">Central de ajuda <i class="bi bi-chevron-down"></i></button>
+                            <ul class="footer-links">
+                                <li><a href="#">Fale Conosco</a></li>
+                                <li><a href="#">Frete e Entrega</a></li>
+                                <li><a href="#">Trocas e Devoluções</a></li>
+                                <li><a href="#">Formas de Pagamento</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column" data-mobile-toggle>
+                            <button class="footer-title">Atendimento <i class="bi bi-chevron-down"></i></button>
+                            <ul class="footer-links">
+                                <li><strong>Telefone:</strong> (00) 1234-5678</li>
+                                <li><strong>E-mail:</strong> exemplo@exemplo.com.br</li>
+                                <li><strong>Horário:</strong><br>Seg a Sáb: 07h às 23h<br>Dom e
+                                    Feriados: 07h às
+                                    21h</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-payments">
+                        <img src="https://img.icons8.com/?size=100&id=1433&format=png&color=000000" alt="Amex" />
+                        <img src="https://img.icons8.com/?size=100&id=61731&format=png&color=000000" alt="Mastercard" />
+                        <img src="https://images.icon-icons.com/2340/PNG/512/elo_payment_method_icon_142723.png"
+                            alt="elo" />
+                        <img src="https://files.fm/thumb_show.php?i=ww5mrumxm8" alt="diners-club" />
+                        <img src="https://img.icons8.com/?size=100&id=1429&format=png&color=000000" alt="Visa" />
+                        <img src="https://images.icon-icons.com/2340/PNG/512/hipercard_payment_method_icon_142722.png"
+                            alt="hipercard" />
+                        <img src="https://img.icons8.com/?size=100&id=uqpbD9vhCDEQ&format=png&color=000000" alt="Pix" />
+                        <img src="https://images.icon-icons.com/2340/PNG/512/paypal_payment_method_icon_142716.png"
+                            alt="PayPal" />
+                        <img src="https://img.icons8.com/?size=100&id=F77TABNQzR3w&format=png&color=000000"
+                            alt="Boleto" />
+                    </div>
+                    <div class="footer-bottom">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy
+                            nibh
+                            euismod tincidunt ut
+                            laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                            veniam, quis
+                            nostrud exerci.</p>
+                        <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                            <img src="https://blog.apiki.com/wp-content/uploads/sites/2/2016/09/lets-encryption-logo-standard-300x248.png"
+                                alt="Selo 1" class="selo-img" />
+                            <img src="https://s3-alpha-sig.figma.com/img/e20b/c83f/4274db867f5737833368c12b977e3900?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=cBIFqiBQbySPDZObC-W1P591F6mRhrA8YodIUXkxw3jrfofgmHjstibW9LZur1MqQbzJ3wCcYbVg1qOyfuw4Bdgw1X3hACmmKYRVlXBU-qZOSEquCdDcwlJSy7Fk1A7oaJ5xqogDzOxyodofth0hEdQLVcrO9WZYKxwKDtGpntf9vVXSqHiDHg8DBk5TU58xv19UomL0oujXh7510hG2-MtDC0RMQVOWbKyef~BSmvxKZ0Ph4jYKiPdlpagc0GQ7I2ZfAT4Ru-aeQbtBut3FDVvOZU58Da7H2D~ReVr3AiNDJjOet4ArKxZJyw9mB-xBK6iqK2GSrb93iGWthHEg-w__"
+                                alt="Selo 2" class="selo-img" />
+                            <img src="https://files.fm/thumb_show.php?i=hg9rn7tw5f" alt="Selo 3" class="selo-img" />
+                            <img src="https://files.fm/thumb_show.php?i=r6qgw5x2hd" alt="Selo 4" class="selo-img" />
+                        </div>
+                    </div>
+            </div>
+        </footer>
+
+        <script src="footer.js"></script>
+    </div>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="footer.js" defer></script>
+
+    <script>
+        const swiper = new Swiper(".swiper", {
+            slidesPerView: 5,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 5 },
+            },
+        });
+
+        document.getElementById("search-btn-desktop").addEventListener("click", () => {
+            const value = document.getElementById("search-desktop").value.trim();
+            const feedback = document.getElementById("search-feedback-desktop");
+            feedback.textContent = value ? `Você buscou por: '${value}'` : '';
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('[data-mobile-toggle]');
+
+            sections.forEach((section) => {
+                const button = section.querySelector(".footer-title");
+
+                button.addEventListener("click", () => {
+                    if (window.innerWidth <= 768) {
+                        section.classList.toggle("open");
+                    }
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
